@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace banking_app
+namespace banking_class_library
 {
     public class BankAccount
     {
@@ -10,7 +10,8 @@ namespace banking_app
 
         public string Owner { get; set; }
 
-        public decimal Balance {
+        public decimal Balance
+        {
             get
             {
                 decimal balance = 0;
@@ -68,7 +69,7 @@ namespace banking_app
             foreach (var item in allTransactions)
             {
                 //ROWS
-                report.AppendLine($"{item.Date.ToShortDateString()}\t${item.Amount}\t{item.Notes}");
+                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.AmountForHumans}\t{item.Notes}");
             }
             return report.ToString();
         }

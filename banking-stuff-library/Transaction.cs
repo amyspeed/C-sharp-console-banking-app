@@ -1,5 +1,5 @@
 ﻿using System;
-namespace banking_app
+namespace banking_stuff_library
 {
     public class Transaction
     {
